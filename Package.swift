@@ -9,7 +9,8 @@ let package = Package(
         .executable(name: "WhatCable", targets: ["WhatCable"]),
         .executable(name: "whatcable-cli", targets: ["WhatCableCLI"]),
         .library(name: "WhatCableCore", targets: ["WhatCableCore"]),
-        .library(name: "WhatCableAppKit", targets: ["WhatCableAppKit"])
+        .library(name: "WhatCableAppKit", targets: ["WhatCableAppKit"]),
+        .library(name: "WhatCableDarwinBackend", targets: ["WhatCableDarwinBackend"])
     ],
     targets: [
         .target(
