@@ -258,6 +258,11 @@ public final class PowerSourceWatcher: ObservableObject {
             smcReader: smcReader,
             readCharger: readsChargerInputWatts
         )
+        refresh(using: reading)
+    }
+
+    /// The publishing half of `refresh()`, split out so a test can feed it a fixed reading.
+    func refresh(using reading: Reading) {
         apply(reading)
         applyChargeState(reading.chargeState)
     }

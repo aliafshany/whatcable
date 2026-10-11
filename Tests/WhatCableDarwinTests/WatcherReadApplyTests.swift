@@ -89,13 +89,33 @@ import Testing
     }
 
     @MainActor @Test func powerApplyMatchesRefresh() {
+        // One shared reading: two live reads drift (charger watts), which made this flaky.
+        // The charger flag stays off: turning it on triggers its own live read.
         let smc = SMCPowerReader()
-        let a = PowerSourceWatcher(smcReader: smc); a.readsChargerInputWatts = true; a.refresh()
-        let b = PowerSourceWatcher(smcReader: smc); b.readsChargerInputWatts = true
-        b.apply(PowerSourceWatcher.readSources(synthesis: nil, smcReader: smc, readCharger: true))
+        let reading = PowerSourceWatcher.readSources(synthesis: nil, smcReader: smc, readCharger: true)
+        let a = PowerSourceWatcher(smcReader: smc)
+        a.refresh(using: reading)
+        let b = PowerSourceWatcher(smcReader: smc)
+        b.apply(reading); b.applyChargeState(reading.chargeState)
         #expect(a.sources == b.sources)
         #expect(a.chargerInputWatts == b.chargerInputWatts && a.chargerRatedWatts == b.chargerRatedWatts)
+        #expect(a.batteryChargeState == b.batteryChargeState)
+        // A reading with a charger must actually have been published, or the equality above is vacuous.
+        if let charger = reading.charger {
+            #expect(a.chargerInputWatts == charger.input && a.chargerRatedWatts == charger.rated)
+        }
         a.stop(); b.stop(); smc.close()
+    }
+
+    @MainActor @Test func refreshUsingPublishesEveryField() {
+        // Fixed reading, so sources and charge state are exercised on any Mac, battery or not.
+        let source = PowerSource(id: 9, name: "Brick ID", parentPortType: 2, parentPortNumber: 1, options: [], winning: nil)
+        let w = PowerSourceWatcher(smcReader: SMCPowerReader())
+        w.refresh(using: .init(sources: [source], charger: .init(input: 61, rated: 70), chargeState: .charging))
+        #expect(w.sources == [source])
+        #expect(w.chargerInputWatts == 61 && w.chargerRatedWatts == 70)
+        #expect(w.batteryChargeState == .charging)
+        w.stop()
     }
 
     @MainActor @Test func powerApplyWithoutChargerLeavesReadoutAlone() {
