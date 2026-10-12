@@ -22,6 +22,13 @@ struct WidgetPresenceRaceTests {
 
     /// Stub presence checker that suspends every call until the test
     /// explicitly releases it, by call order.
+    ///
+    /// `@MainActor` is spelled out because the suite's attribute does not
+    /// reach nested types. Without it, `hasInstalledWidgets()` ran on the
+    /// generic executor and appended to `pending` off the main thread while
+    /// the test read it on main: a data race that crashed CI once, and a
+    /// missed append under Thread Sanitizer's slower timing.
+    @MainActor
     final class GatedPresenceChecker: WidgetPresenceChecking {
         private var pending: [(Bool) -> Void] = []
 
