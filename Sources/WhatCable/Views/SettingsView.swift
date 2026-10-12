@@ -18,7 +18,15 @@ struct SettingsView: View {
             }
             SettingsForm()
         }
-        .frame(minWidth: 400, minHeight: 320, maxHeight: 640)
+        // The 640 cap is for the popover. In a resizable window it left
+        // Settings shorter than the window, and centred, so its Done header
+        // floated mid-window (issue #600).
+        .frame(
+            minWidth: 400,
+            minHeight: 320,
+            maxHeight: settings.useMenuBarMode ? 640 : .infinity,
+            alignment: settings.useMenuBarMode ? .center : .top
+        )
     }
 
     private func header(dismiss: @escaping () -> Void) -> some View {

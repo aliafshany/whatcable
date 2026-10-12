@@ -69,8 +69,22 @@ struct ContentView: View {
         }
     }
 
+    /// Window mode floor: at least 200 tall, but a Pro screen's or Settings'
+    /// own larger minimum wins (`minimumFloor`). The outer frame in `body`
+    /// can't carry it in window mode: an explicit min there overrides the
+    /// child's, which let the window shrink past every screen's minimum and
+    /// crop the header (issue #600). The popover keeps the outer frame's min.
+    @ViewBuilder
+    private var flooredRootContent: some View {
+        if settings.useMenuBarMode {
+            rootContent
+        } else {
+            rootContent.minimumFloor(height: 200)
+        }
+    }
+
     var body: some View {
-        rootContent
+        flooredRootContent
         // Width: wide enough for the widest Pro screen's own minWidth
         // (Negotiation 560, Power Monitor 520, Cable Diagnostics 500) so
         // content never overflows and clips.
@@ -95,14 +109,18 @@ struct ContentView: View {
             minWidth: 560,
             idealWidth: 560,
             maxWidth: settings.useMenuBarMode ? 760 : .infinity,
-            minHeight: 200,
+            minHeight: settings.useMenuBarMode ? 200 : nil,
             // Height cap comes from the app, which recomputes it from the
             // status item's screen on each open (issue #454): the fixed 760
             // used to exceed the usable height on small or heavily scaled
             // displays, so the popover grew off the top of the screen and the
             // header (with the settings gear) went out of reach. Larger screens
             // still get the full 760 since the app never raises the cap above it.
-            maxHeight: settings.useMenuBarMode ? refresh.maxPopoverHeight : .infinity
+            maxHeight: settings.useMenuBarMode ? refresh.maxPopoverHeight : .infinity,
+            // In a window taller than the screen, pin the screen to the top.
+            // The default centring floated the header mid-window (issue #600).
+            // The popover keeps its old alignment.
+            alignment: settings.useMenuBarMode ? .center : .top
         )
         // `\.fontScale` is now injected at the NSHostingController root by
         // `ScaledHost`, which observes `FontScaleStore` so every SwiftUI
@@ -1793,6 +1811,22 @@ struct ProScreenContainer<Content: View>: View {
             .padding(.vertical, 8)
             Divider()
             content
+        }
+    }
+}
+
+extension View {
+    /// Floors this view's minimum size without overriding a larger minimum
+    /// the view declares itself. A `.frame(minHeight:)` can't do that: any
+    /// explicit min reports that value as the frame's minimum, whatever the
+    /// child's, and `NSHostingController` sizes the window's floor from it. A
+    /// ZStack's minimum is the largest of its layers', so a clear layer
+    /// carrying the floor gives max(floor, view's own minimum). Top-aligned so
+    /// a view shorter than the stack sits at the top.
+    func minimumFloor(width: CGFloat = 0, height: CGFloat) -> some View {
+        ZStack(alignment: .top) {
+            Color.clear.frame(minWidth: width, minHeight: height)
+            self
         }
     }
 }
