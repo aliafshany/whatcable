@@ -150,6 +150,7 @@
 "Built-in USB ports" = "Yerleşik USB bağlantı noktaları";
 "Built-in USB-A ports" = "Yerleşik USB-A bağlantı noktaları";
 "Plain USB ports behind the Mac's internal hub, so there's no cable, power, or Thunderbolt data for them." = "Mac'in dahili hub'ına bağlı sıradan USB bağlantı noktaları, bu nedenle bunlar için kablo, güç veya Thunderbolt verisi yoktur.";
+"Move these devices to a Thunderbolt port to see more about them." = "Bu aygıtlar hakkında daha fazla bilgi görmek için onları bir Thunderbolt bağlantı noktasına taşıyın.";
 
 /* Built-in display port card (issue #352). English placeholders, community can refine. */
 "Display connected" = "Display connected";

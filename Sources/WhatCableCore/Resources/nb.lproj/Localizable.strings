@@ -471,6 +471,7 @@
 "Built-in USB ports" = "Innebygde USB-porter";
 "Built-in USB-A ports" = "Innebygde USB-A-porter";
 "Plain USB ports behind the Mac's internal hub, so there's no cable, power, or Thunderbolt data for them." = "Enkle USB-porter bak Macens interne hub, så det finnes ingen kabel-, strøm- eller Thunderbolt-data for dem.";
+"Move these devices to a Thunderbolt port to see more about them." = "Flytt disse enhetene til en Thunderbolt-port for å se mer om dem.";
 
 /* Cable history */
 "Add this cable" = "Legg til denne kabelen";

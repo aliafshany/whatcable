@@ -778,6 +778,16 @@ struct TextFormatterTests {
         #expect(output.contains("PSSD T9"))
     }
 
+    @Test("Built-in USB ports footer tells the user to move devices to a Thunderbolt port (public issue #436)")
+    func builtInUSBFooterSuggestsThunderboltPort() {
+        let output = TextFormatter.render(
+            ports: [makePort()], sources: [], identities: [], showRaw: false,
+            isDesktopMac: true,
+            usbDevices: [frontPortDevice(name: "PSSD T9")]
+        )
+        #expect(output.contains("Thunderbolt data for them. Move these devices to a Thunderbolt port to see more about them."))
+    }
+
     @Test("Built-in section with named USB-A ports: USB-A title, per-port headers, nested devices (issue #490)")
     func builtInUSBSectionNamesUSBAPorts() {
         func namedDevice(id: UInt64, name: String, portNode: String) -> USBDevice {

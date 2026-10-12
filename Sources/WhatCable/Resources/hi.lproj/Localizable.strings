@@ -150,6 +150,7 @@
 "Built-in USB ports" = "अंतर्निहित USB पोर्ट";
 "Built-in USB-A ports" = "अंतर्निहित USB-A पोर्ट";
 "Plain USB ports behind the Mac's internal hub, so there's no cable, power, or Thunderbolt data for them." = "ये Mac के आंतरिक हब से जुड़े साधारण USB पोर्ट हैं, इसलिए इनके लिए कोई केबल, पावर या Thunderbolt डेटा नहीं है।";
+"Move these devices to a Thunderbolt port to see more about them." = "इनके बारे में और जानने के लिए इन डिवाइसों को Thunderbolt पोर्ट पर ले जाएँ।";
 
 /* Built-in display port card (issue #352). English placeholders, community can refine. */
 "Display connected" = "Display connected";

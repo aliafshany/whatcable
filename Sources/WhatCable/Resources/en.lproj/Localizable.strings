@@ -153,6 +153,7 @@
 "Built-in USB ports" = "Built-in USB ports";
 "Built-in USB-A ports" = "Built-in USB-A ports";
 "Plain USB ports behind the Mac's internal hub, so there's no cable, power, or Thunderbolt data for them." = "Plain USB ports behind the Mac's internal hub, so there's no cable, power, or Thunderbolt data for them.";
+"Move these devices to a Thunderbolt port to see more about them." = "Move these devices to a Thunderbolt port to see more about them.";
 
 /* Built-in display port card (issue #352). Used by the popover when a
    native HDMI port is showing a display. */

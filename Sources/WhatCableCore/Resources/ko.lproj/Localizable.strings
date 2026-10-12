@@ -470,6 +470,7 @@
 "Built-in USB ports" = "내장 USB 포트";
 "Built-in USB-A ports" = "내장 USB-A 포트";
 "Plain USB ports behind the Mac's internal hub, so there's no cable, power, or Thunderbolt data for them." = "Mac의 내장 허브에 연결된 일반 USB 포트라서 케이블, 전력, Thunderbolt 데이터가 없습니다.";
+"Move these devices to a Thunderbolt port to see more about them." = "이 기기들에 대해 더 자세히 보려면 Thunderbolt 포트로 옮겨 연결하세요.";
 
 /* Cable history */
 "Add this cable" = "이 케이블 추가";

@@ -234,7 +234,8 @@ public enum TextFormatter {
                 out += "\(indent)\(prefix) \(name) - \(node.device.speedLabel)\n"
             }
         }
-        out += "  " + ANSI.wrap(ANSI.dim, String(localized: "Plain USB ports behind the Mac's internal hub, so there's no cable, power, or Thunderbolt data for them.", bundle: _coreLocalizedBundle)) + "\n"
+        out += "  " + ANSI.wrap(ANSI.dim, String(localized: "Plain USB ports behind the Mac's internal hub, so there's no cable, power, or Thunderbolt data for them.", bundle: _coreLocalizedBundle)
+        + " " + String(localized: "Move these devices to a Thunderbolt port to see more about them.", bundle: _coreLocalizedBundle)) + "\n"
         return out
     }
 

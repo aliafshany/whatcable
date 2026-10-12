@@ -151,6 +151,7 @@
 "Built-in USB ports" = "内蔵USBポート";
 "Built-in USB-A ports" = "内蔵USB-Aポート";
 "Plain USB ports behind the Mac's internal hub, so there's no cable, power, or Thunderbolt data for them." = "Macの内蔵ハブに接続された通常のUSBポートのため、これらのケーブル、電力、Thunderboltのデータはありません。";
+"Move these devices to a Thunderbolt port to see more about them." = "これらのデバイスの詳細を確認するには、Thunderboltポートに接続し直してください。";
 
 /* Built-in display port card (issue #352). English placeholders, community can refine. */
 "Display connected" = "Display connected";

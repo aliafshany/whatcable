@@ -150,6 +150,7 @@
 "Built-in USB ports" = "Ingebouwde USB-poorten";
 "Built-in USB-A ports" = "Ingebouwde USB-A-poorten";
 "Plain USB ports behind the Mac's internal hub, so there's no cable, power, or Thunderbolt data for them." = "Gewone USB-poorten achter de interne hub van de Mac, dus er zijn geen kabel-, voedings- of Thunderbolt-gegevens voor ze.";
+"Move these devices to a Thunderbolt port to see more about them." = "Verplaats deze apparaten naar een Thunderbolt-poort om er meer over te zien.";
 
 /* Built-in display port card (issue #352). English placeholders, community can refine. */
 "Display connected" = "Display connected";

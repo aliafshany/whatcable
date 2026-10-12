@@ -471,6 +471,7 @@
 "Built-in USB ports" = "内置 USB 端口";
 "Built-in USB-A ports" = "内置 USB-A 端口";
 "Plain USB ports behind the Mac's internal hub, so there's no cable, power, or Thunderbolt data for them." = "连接到 Mac 内部集线器的普通 USB 端口，因此没有它们的线缆、电源或 Thunderbolt 数据。";
+"Move these devices to a Thunderbolt port to see more about them." = "将这些设备移到 Thunderbolt 端口，即可查看更多信息。";
 
 /* Cable history */
 "Add this cable" = "添加此线缆";

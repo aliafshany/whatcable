@@ -470,6 +470,7 @@
 "Built-in USB ports" = "Вбудовані порти USB";
 "Built-in USB-A ports" = "Вбудовані порти USB-A";
 "Plain USB ports behind the Mac's internal hub, so there's no cable, power, or Thunderbolt data for them." = "Звичайні порти USB за внутрішнім концентратором Mac, тому для них немає даних про кабель, живлення чи Thunderbolt.";
+"Move these devices to a Thunderbolt port to see more about them." = "Перемкніть ці пристрої на порт Thunderbolt, щоб побачити більше інформації про них.";
 
 /* Cable history */
 "Add this cable" = "Додати цей кабель";

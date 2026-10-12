@@ -151,6 +151,7 @@
 "Built-in USB ports" = "Integrierte USB-Anschlüsse";
 "Built-in USB-A ports" = "Integrierte USB-A-Anschlüsse";
 "Plain USB ports behind the Mac's internal hub, so there's no cable, power, or Thunderbolt data for them." = "Einfache USB-Anschlüsse hinter dem internen Hub des Macs, daher gibt es für sie keine Kabel-, Strom- oder Thunderbolt-Daten.";
+"Move these devices to a Thunderbolt port to see more about them." = "Verschiebe diese Geräte an einen Thunderbolt-Anschluss, um mehr über sie zu sehen.";
 
 /* Built-in display port card (issue #352). English placeholders, community can refine. */
 "Display connected" = "Display connected";

@@ -470,6 +470,7 @@
 "Built-in USB ports" = "Iebūvētie USB porti";
 "Built-in USB-A ports" = "Iebūvētie USB-A porti";
 "Plain USB ports behind the Mac's internal hub, so there's no cable, power, or Thunderbolt data for them." = "Vienkārši USB porti aiz Mac iekšējā centrmezgla, tāpēc par tiem nav kabeļa, jaudas vai Thunderbolt datu.";
+"Move these devices to a Thunderbolt port to see more about them." = "Lai redzētu vairāk informācijas par šīm ierīcēm, pārvietojiet tās uz Thunderbolt portu.";
 
 /* Cable history */
 "Add this cable" = "Pievienot šo kabeli";

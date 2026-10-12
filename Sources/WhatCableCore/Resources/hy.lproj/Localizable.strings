@@ -471,6 +471,7 @@
 "Built-in USB ports" = "Ներկառուցված USB միացքներ";
 "Built-in USB-A ports" = "Ներկառուցված USB-A միացքներ";
 "Plain USB ports behind the Mac's internal hub, so there's no cable, power, or Thunderbolt data for them." = "Պարզ USB միացքներ՝ Mac-ի ներքին հանգույցի հետևում, ուստի դրանց համար չկան մալուխի, սնման կամ Thunderbolt տվյալներ։";
+"Move these devices to a Thunderbolt port to see more about them." = "Այս սարքերի մասին ավելին տեսնելու համար տեղափոխեք դրանք Thunderbolt նավահանգիստ։";
 
 /* Cable history */
 "Add this cable" = "Ավելացնել այս մալուխը";

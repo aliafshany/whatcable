@@ -882,6 +882,7 @@ struct OtherUSBDevicesCard: View {
             return String(localized: "Reached through a Thunderbolt dock or display, so there's no cable, power, or Thunderbolt data for them.", bundle: _appLocalizedBundle)
         case .builtInUSBPort:
             return String(localized: "Plain USB ports behind the Mac's internal hub, so there's no cable, power, or Thunderbolt data for them.", bundle: _appLocalizedBundle)
+                + " " + String(localized: "Move these devices to a Thunderbolt port to see more about them.", bundle: _appLocalizedBundle)
         }
     }
 
