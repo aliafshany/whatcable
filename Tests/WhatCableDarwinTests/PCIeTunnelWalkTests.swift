@@ -184,7 +184,7 @@ struct PCIeTunnelWalkTests {
         var usbHostDevice = false
         var serviceName: String?
         // Stage B v2: accepted, not required. `entryID=` is a NEW token
-        // (planning/pcie-tunnelled-usb-attribution.md); older captures
+        // (the private design note "PCIe-tunnelled USB attribution"); older captures
         // never had it and must still parse (the `default: break` below
         // already makes any unrecognised token harmless, this just also
         // extracts the one this file's tests care about).

@@ -61,7 +61,7 @@ import WhatCableCore
 // 2. Cross-checks those extracted values against `corpus.jsonl`'s
 //    `signals.battery_pct` / `signals.adapter_w` fields, which were computed
 //    by an entirely separate tool (`inspect-probe.py`, run by the
-//    `/whatcable-process-probe` skill). Agreement between two independently
+//    private probe-ingest step). Agreement between two independently
 //    written extractions is real evidence the raw values themselves, and the
 //    format assumptions both extractions share, are sound -- even though
 //    neither path is `AppleSmartBatteryReader`.
@@ -376,7 +376,7 @@ struct AppleSmartBatteryReaderCorpusSweepTests {
             guard let corpusRow = corpusRows[folder] else { continue }
 
             // Desktop/laptop gate: corpus.jsonl's form_factor is derived
-            // independently (by the /whatcable-process-probe skill's own
+            // independently (by the private probe-ingest step's own
             // BatteryInstalled read), so agreement here is cross-validation,
             // not a tautology against this file's own extraction. One
             // documented exception (faulted-battery laptop) is excluded, see

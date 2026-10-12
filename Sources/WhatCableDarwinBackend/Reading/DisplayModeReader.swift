@@ -12,7 +12,7 @@ import WhatCableCore
 /// CoreGraphics is the right source here: it exposes the current mode through a
 /// public, stable API and gives the live refresh directly, where the IOKit
 /// framebuffer nodes carry no port join key and no readable mode handle on
-/// Apple Silicon. See `planning/display-current-mode-coregraphics.md`.
+/// Apple Silicon. See the private design note "display current mode (CoreGraphics)".
 ///
 /// The only platform-specific step is reading from CoreGraphics. The match
 /// logic is a pure function (`match(ports:displays:)`) so it can be unit-tested

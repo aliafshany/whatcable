@@ -312,7 +312,7 @@ Cable reports are also very welcome. If you have an e-marked cable, use the "Rep
 
 ### Research references
 
-Some comments and docs cite files under `research/` (for example `research/displays/display-node-keys.md`). That folder is my private research library, built from raw diagnostic dumps off real machines, and it is not part of this repo. The references stay so each decision names its evidence, even where you cannot open it.
+Some comments and docs cite files under `research/` (for example `research/displays/display-node-keys.md`). That folder is my private research library, built from raw diagnostic dumps off real machines, and it is not part of this repo. The references stay so each decision names its evidence, even where you cannot open it. Comments may likewise name private notes, tooling and rules, which are not part of this repo either.
 
 ## Credits
 

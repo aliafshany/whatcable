@@ -34,7 +34,7 @@ struct DisplayTimingReaderProbeSweepTests {
     @Test("Sweep: macOS's driven timing is a mode the EDID declares, on every node the corpus lets us pair")
     func drivenTimingIsADeclaredMode() throws {
         guard let folders = try? FileManager.default.contentsOfDirectory(atPath: CorpusDisplayProbes.probeRoot.path) else {
-            return // corpus absent: scripts/ci.sh's presence check owns that failure
+            return // corpus absent: the private CI's corpus-presence check owns that failure
         }
 
         var foldersWithProbe26 = 0
@@ -151,7 +151,7 @@ struct DisplayTimingReaderProbeSweepTests {
     @Test("Sweep: the DSC-required, unsafe, SupportsDSC, DownstreamFormat and ValidPixelEncodings fields replay to the pair figures")
     func statementFieldsMatchThePairFigures() throws {
         guard let folders = try? FileManager.default.contentsOfDirectory(atPath: CorpusDisplayProbes.probeRoot.path) else {
-            return // corpus absent: scripts/ci.sh's presence check owns that failure
+            return // corpus absent: the private CI's corpus-presence check owns that failure
         }
 
         var nodesWithTables = 0
@@ -363,7 +363,7 @@ struct DisplayTimingReaderProbeSweepTests {
     @Test("Sweep: the top mode against the node's own timings, by outcome, before and after ruling 41, on every eligible node")
     func topModeMatchesTheNodeByOutcome() throws {
         guard let corpus = CorpusDisplayProbes.accountCorpus() else {
-            return // corpus absent: scripts/ci.sh's presence check owns that failure
+            return // corpus absent: the private CI's corpus-presence check owns that failure
         }
         var paired = 0
         var atTop = 0, atTopExact = 0, atTopSameRefresh = 0

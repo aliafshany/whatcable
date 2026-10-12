@@ -516,7 +516,7 @@ public final class USBWatcher: ObservableObject {
         /// ancestor is the walk terminator for a continuing tunnel (`walkContinuation`
         /// returns `.continueToPCIeRoot`). Captured at the terminator hit, before the
         /// continuation walk advances toward `apciecN`, per the capture-timing rule
-        /// (`planning/pcie-tunnelled-usb-attribution.md`). nil for every other
+        /// (the private design note "PCIe-tunnelled USB attribution"). nil for every other
         /// ancestor, and nil when the terminator's path read fails.
         let terminatorRegistryPath: String?
 

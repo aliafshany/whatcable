@@ -7,7 +7,7 @@ import Foundation
 ///
 /// TB5 was confirmed against a real M5 Pro + UGreen JHL9580 dock sample on
 /// issue #52, so the renderer now emits a confirmed TB5 label for raw speed
-/// code `0x2`. See planning/thunderbolt-fabric.md for the reasoning.
+/// code `0x2`. See `research/thunderbolt-fabric.md` for the reasoning.
 public enum ThunderboltLabels {
     /// Which end of a link "out" and "in" are written from. `.farEnd` swaps
     /// the two directions. It only matters on an asymmetric width: a

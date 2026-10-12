@@ -196,7 +196,7 @@ struct USB3TransientReproTests {
     // MARK: - Quick-swap stale device: the accepted residual, pinned
     //
     // The spec's round-2 decision (see
-    // `planning/dar-50-usb3-speed-corroboration.md`, "Quick-swap stale
+    // the private design note "USB3 speed corroboration", "Quick-swap stale
     // device: ACCEPTED RESIDUAL") is that corroboration cannot tell WHICH
     // attachment an enumerated device belongs to: macOS publishes no
     // attachment-generation identity. So if a SuperSpeed device is

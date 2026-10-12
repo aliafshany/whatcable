@@ -287,7 +287,7 @@ struct ChainAttributionProbeSweepTests {
     // `research/customer-probes/*/37_tb_tunnel_port_map.json` are tracked in
     // git (`.gitignore` negation, alongside their probe-29/38 siblings), so
     // this half of the sweep runs on a fresh clone or a worktree too, not
-    // just the primary folder after a `/whatcable-process-probe` ingest.
+    // just the primary folder after a private probe-ingest step.
     // Every OTHER folder's probe 37 stays untracked, so `probe37BridgeDepths`
     // still returns an empty map for them there; the caller treats that as
     // "leave every device's structural fields nil", exactly the same honest
@@ -1209,7 +1209,7 @@ struct ChainAttributionProbeSweepTests {
     ///
     /// Floor (spec section 8 phase 4): the sweep must find the 5 known
     /// route-byte points named in the ticket evidence
-    /// (`whatcable-app-notes/tree-attribution/TICKET.md`: byte 3 -> port 1
+    /// (the private notes (tree-attribution, TICKET.md): byte 3 -> port 1
     /// x3, byte 5 -> port 2, byte 7 -> port 3), so a silent regression in
     /// the pass cannot pass as a clean "found nothing" run.
     @Test("TB5 corpus sweep: the TB5 tunnel-hub pass fires on known folders and never wrongly")
@@ -1363,7 +1363,7 @@ struct ChainAttributionProbeSweepTests {
         // asserted alongside byte 3 rather than left as an unchecked extra
         // data point. Byte 5 -> hub port 2 is NOT asserted here: it is
         // spec-verified from live-desk evidence (section 2 point 3 of
-        // `planning/dar-356-tb5-tunnel-hub-attribution.md`), but this
+        // the private design note "TB5 tunnel-hub attribution"), but this
         // corpus snapshot's tracked single-active-port subset carries no
         // folder whose edge presents a route byte of 5 (checked: this run's
         // `knownRouteBytePoints` never contains a `:5` entry), so asserting

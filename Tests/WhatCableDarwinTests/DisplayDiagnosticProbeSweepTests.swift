@@ -988,7 +988,7 @@ struct DisplayDiagnosticProbeSweepTests {
         // Non-vacuity: a corpus directory that exists but yields no probe-33
         // block must not pass silently. Unconditional on purpose: the only
         // SKIP path is the absent directory handled by the early return above,
-        // which scripts/ci.sh's corpus-presence check owns.
+        // which the private CI's corpus-presence check owns.
         #expect(evaluated > 0,
             "no block evaluated across \(foldersWithProbe33) folders with probe 33: checked at least one")
         print("neededBandwidthEqualsTheDeclaredTopModesPixelClock: evaluated \(evaluated) blocks (\(noLinkRate) of them with no readable link rate, \(ycbcr420Tops) whose EDID top is 4:2:0-only) across \(foldersWithProbe33) folders")
@@ -1009,7 +1009,7 @@ struct DisplayDiagnosticProbeSweepTests {
     /// Whether the corpus folder is on disk: the only condition under which an
     /// anchor test may return without asserting. A folder that is present but
     /// does not pair is a failure, never a skip (a green run on no data is
-    /// the trap CLAUDE.md names).
+    /// the trap the project's private rules name).
     private static func folderOnDisk(_ folder: String) -> Bool {
         FileManager.default.fileExists(atPath: CorpusDisplayProbes.probeRoot.appendingPathComponent(folder).path)
     }
@@ -1189,7 +1189,7 @@ struct DisplayDiagnosticProbeSweepTests {
     @Test("#664 counts: over the eligible population, uncompressed for every empty-list driven timing, DSC on for every Apple display with a DSC-capable mode, and for every non-Apple timing the firmware rule marks")
     func statementCountsAcrossTheCorpus() throws {
         guard let corpus = CorpusDisplayProbes.accountCorpus() else {
-            return // corpus absent: scripts/ci.sh's presence check owns that failure
+            return // corpus absent: the private CI's corpus-presence check owns that failure
         }
         var paired = 0, tested = 0
         var sampledSkipped: [String] = []
@@ -1324,7 +1324,7 @@ struct DisplayDiagnosticProbeSweepTests {
     @Test("#664 native HDMI ports print the port's TMDS receipt: K39 and K40 together cover every native-HDMI node with unsafe members")
     func nativeHDMIPortsPrintThePortTMDSReceipt() throws {
         guard let corpus = CorpusDisplayProbes.accountCorpus() else {
-            return // corpus absent: scripts/ci.sh's presence check owns that failure
+            return // corpus absent: the private CI's corpus-presence check owns that failure
         }
         var nativeHDMI = 0, withMembers = 0, k39: [String] = [], k40: [String] = [], adapterWording: [String] = [], missing: [String] = []
         for pairing in corpus.attached {
@@ -1366,7 +1366,7 @@ struct DisplayDiagnosticProbeSweepTests {
     @Test("#664 NSScreen's depth decides nothing: every attached node reads the same verdict with a CoreGraphics mode at 8 bits, at 10, and with none")
     func nsScreenDepthDecidesNothing() throws {
         guard let corpus = CorpusDisplayProbes.accountCorpus() else {
-            return // corpus absent: scripts/ci.sh's presence check owns that failure
+            return // corpus absent: the private CI's corpus-presence check owns that failure
         }
         var compared = 0
         var differing: [String] = []
@@ -1410,7 +1410,7 @@ struct DisplayDiagnosticProbeSweepTests {
     @Test("#664 count four: every eligible node driven below its top mode reads the outcome the node's own top-mode timing gives")
     func belowTopReadsTheTopModeTiming() throws {
         guard let corpus = CorpusDisplayProbes.accountCorpus() else {
-            return // corpus absent: scripts/ci.sh's presence check owns that failure
+            return // corpus absent: the private CI's corpus-presence check owns that failure
         }
         var attachedSeen = 0, noDiagnostic: [String] = []
         var belowTop = 0

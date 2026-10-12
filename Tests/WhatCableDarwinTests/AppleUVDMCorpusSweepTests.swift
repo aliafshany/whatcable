@@ -41,7 +41,7 @@ struct AppleUVDMCorpusSweepTests {
     }
 
     /// True once at least one folder on disk actually carries probe 17. A
-    /// fresh clone (or a worktree that hasn't run `scripts/link-research.sh`)
+    /// fresh clone (or a worktree that hasn't linked the private research corpus)
     /// enumerates zero folders, so this is false there.
     private static func hasUVDMProbeFiles() -> Bool {
         for folder in allProbeFolders() {
@@ -190,7 +190,7 @@ struct AppleUVDMCorpusSweepTests {
     func corpusCoverageAndVendorIDFloor() {
         guard Self.hasUVDMProbeFiles() else {
             print("[AppleUVDMCorpusSweep] SKIP: no customer-probe corpus at \(Self.probeRoot.path). "
-                + "Run scripts/link-research.sh to link it, or this sweep tests nothing.")
+                + "Link the private research corpus (link-research.sh) to run it, or this sweep tests nothing.")
             return
         }
 
@@ -210,7 +210,7 @@ struct AppleUVDMCorpusSweepTests {
     func displayNameRuleHoldsAcrossCorpus() {
         guard Self.hasUVDMProbeFiles() else {
             print("[AppleUVDMCorpusSweep] SKIP: no customer-probe corpus at \(Self.probeRoot.path). "
-                + "Run scripts/link-research.sh to link it, or this sweep tests nothing.")
+                + "Link the private research corpus (link-research.sh) to run it, or this sweep tests nothing.")
             return
         }
 
@@ -278,7 +278,7 @@ struct AppleUVDMCorpusSweepTests {
     func vendorIDIsAppleOnly() {
         guard Self.hasUVDMProbeFiles() else {
             print("[AppleUVDMCorpusSweep] SKIP: no customer-probe corpus at \(Self.probeRoot.path). "
-                + "Run scripts/link-research.sh to link it, or this sweep tests nothing.")
+                + "Link the private research corpus (link-research.sh) to run it, or this sweep tests nothing.")
             return
         }
 
@@ -302,7 +302,7 @@ struct AppleUVDMCorpusSweepTests {
     func identifiersAreNeverDropped() {
         guard Self.hasUVDMProbeFiles() else {
             print("[AppleUVDMCorpusSweep] SKIP: no customer-probe corpus at \(Self.probeRoot.path). "
-                + "Run scripts/link-research.sh to link it, or this sweep tests nothing.")
+                + "Link the private research corpus (link-research.sh) to run it, or this sweep tests nothing.")
             return
         }
 

@@ -368,7 +368,7 @@ private struct PortDTO: Codable {
         // emitting a speed. Without this, a `--json` snapshot taken mid
         // cable-orientation handshake on a charger-only cable prints a
         // usb3Speed that PD negotiation is about to withdraw. See
-        // USB3SpeedCorroboration and planning/dar-50-usb3-speed-corroboration.md.
+        // USB3SpeedCorroboration and the private design note "USB3 speed corroboration".
         let selectedUSB3Transport = USB3SpeedCorroboration.selectedTransport(for: port, in: usb3Transports)
         let usb3Speed: String?
         if port.transportsActive.contains("USB3"),
@@ -558,7 +558,7 @@ private struct CableDTO: Codable {
     /// records ("... isn't in our copy of the USB-IF registry"). Never as a
     /// fault: an unpublished ID says nothing bad about a cable, so
     /// a red/verdict treatment would read as doubt cast on good hardware. See
-    /// planning/cable-trust-model.md for the same lesson learned the expensive
+    /// the private design note "cable-trust-model" for the same lesson learned the expensive
     /// way.
     let certID: String?
     /// Which reading settled `type`: "emarker", "portController" or

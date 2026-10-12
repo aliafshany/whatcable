@@ -19,7 +19,6 @@ dist-mas/
 secrets/
 
 # Local scratch docs (kept uncommitted by convention)
-# planning/ is tracked here; .public-exclude keeps it out of the mirror.
 technical-docs/
 BUILDING.md
 
@@ -63,6 +62,9 @@ research
 # The local data folder (format 1 runs from KV, never in git), linked the same
 # way as `research-data`.
 research-data
+
+# Local tool folder. Never tracked.
+.orca/
 
 # Python bytecode (from research/build scripts like inspect-probe.py)
 __pycache__/

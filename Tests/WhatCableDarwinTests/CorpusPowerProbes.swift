@@ -15,7 +15,7 @@ import Foundation
 // It records the ways this corpus has silently fooled a careful parser, all of
 // them generic to the corpus rather than specific to one feature, and all of
 // them producing a clean plausible result while dropping exactly the rows the
-// question was about. The four that bit whatcable-app PR #599, in short:
+// question was about. The four that bit an earlier change, in short:
 //
 //  - probe 32 prints `PortControllerInfo` TWICE (once under its own section,
 //    again under `=== AppleACAdapter / ChargerData ===`), so a flat scan

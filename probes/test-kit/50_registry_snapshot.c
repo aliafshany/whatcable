@@ -34,7 +34,7 @@
  * firmware and display routing variables. Boot state and settings are not
  * hardware.
  *
- * Privacy (spec "Privacy"; whatcable-app CLAUDE.md:9-15): only personal privacy
+ * Privacy (spec "Privacy"; the project's hardware-identifier rule): only personal privacy
  * is protected, by the rules all the probes share in probe_json.h. Withheld: what
  * ties this Mac to its owner (serial numbers, platform UUID, chip ID, its own
  * network and Bluetooth addresses) and the home folder path, by key name and by

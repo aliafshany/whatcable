@@ -3,7 +3,7 @@
 # Unit tests for the format 1 probe code: the shared writer
 # (probes/test-kit/probe_json.h) in C, and the snapshot checks
 # (snapshot_checks.py) in Python, plus a warnings-as-errors compile of every
-# format 1 probe (numbered 50 and up). scripts/ci.sh calls this; nothing else
+# format 1 probe (numbered 50 and up). The private CI calls this; nothing else
 # compiles probe code outside a full smoke-test build.
 #
 # Usage: scripts/probe-tests/run.sh

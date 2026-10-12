@@ -15,7 +15,7 @@ showed at the time.
 
 WhatCable's [issue template](../.github/ISSUE_TEMPLATE/cable-report.yml)
 states the goal: a public database of known-good and counterfeit USB-C cable
-fingerprints. The Cable Trust Signals work (see `planning/cable-trust-signals.md`)
+fingerprints. The Cable Trust Signals work (see `research/cable-trust-signals.md`)
 will eventually consume a curated subset of this. For now it is a flat
 hand-maintained markdown table; format may change once the consumer exists.
 

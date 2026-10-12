@@ -231,7 +231,7 @@ struct BlockedDataCorpusSweepTests {
     /// transport nodes needed to evaluate them. Reading that as "the card
     /// failed to report blocked" is wrong: the data simply is not there.
     ///
-    /// This broke `scripts/ci.sh` in a fresh worktree and blocked an unrelated
+    /// This broke the private CI in a fresh worktree and blocked an unrelated
     /// push. `allFolders().isEmpty` was not enough of a guard, because the
     /// folders exist in a worktree; only their contents are thinner.
     private static func rawProbesAvailable() -> Bool {

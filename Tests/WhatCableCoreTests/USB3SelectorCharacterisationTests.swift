@@ -3,7 +3,7 @@ import Testing
 @testable import WhatCableCore
 
 /// issue #181 selector migration, step two of two (step one:
-/// `planning/dar-50-usb3-speed-corroboration.md`, "Characterisation tests,
+/// the private design note "USB3 speed corroboration", "Characterisation tests,
 /// two committed steps"). Step one committed this file recording each
 /// surface's PRE-migration selection for a fixture with BOTH a tunnelled
 /// and a direct USB3 transport canonically matching the same port, in both

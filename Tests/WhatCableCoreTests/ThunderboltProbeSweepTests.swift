@@ -861,7 +861,7 @@ struct ThunderboltProbeSweepTests {
     /// through the PRODUCTION parser (`IOThunderboltPort.from(read:)`, the
     /// same one live code and `probe29SweepParsesWithoutCrashing` above both
     /// use), and checks the switch side of the Stage B v2 PCI-Path-prefix
-    /// join (`planning/pcie-tunnelled-usb-attribution.md`): `PCI Path` /
+    /// join (the private design note "PCIe-tunnelled USB attribution"): `PCI Path` /
     /// `PCI Entry ID` on PCIe up-adapters.
     ///
     /// Two assertions, both corpus-wide:

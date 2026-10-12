@@ -626,7 +626,7 @@ struct USBWatcherCorpusSweepTests {
     // Folder names are positional ingest labels; each fixture's identity is
     // pinned here by its `submitted_at` from corpus.jsonl so it stays
     // re-checkable if folders are ever renamed (see the corpus rules in
-    // the whatcable-process-probe skill).
+    // the private probe-ingest step).
 
     private static func requireBlocks(_ folder: String) throws -> [DeviceBlock] {
         let text = try #require(

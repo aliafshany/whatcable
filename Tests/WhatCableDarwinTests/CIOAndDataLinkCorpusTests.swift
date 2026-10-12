@@ -511,7 +511,7 @@ struct CIOAndDataLinkCorpusTests {
     func cioPeerFieldsAcrossCorpus() {
         let folders = Self.allProbeFolders()
         guard !folders.isEmpty else {
-            Issue.record("Corpus root absent at \(Self.probeRoot.path); run scripts/link-research.sh. This sweep tested nothing.")
+            Issue.record("Corpus root absent at \(Self.probeRoot.path); link the private research corpus (link-research.sh). This sweep tested nothing.")
             return
         }
 

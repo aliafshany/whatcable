@@ -9,7 +9,7 @@ import Foundation
 /// equal-weight bullets made it impossible to tell which was which, and
 /// let a claim read as a fact.
 ///
-/// See `planning/port-card-source-attribution.md` for the design note.
+/// See the private design note "port-card source attribution".
 public struct BulletGroup: Equatable, Sendable {
     public enum Kind: String, Sendable, CaseIterable {
         /// The Mac's controllers. A measurement, wrong only if we misread

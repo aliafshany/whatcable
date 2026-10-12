@@ -33,7 +33,7 @@ struct USBDeviceTreeTests {
 
     @Test("Real capture: UGreen dock tunnel hub sits at port 1 under the Studio Display's tunnel hub")
     func childHubPortRealCapture() {
-        // whatcable-app-notes/tree-attribution/json-dock.json: the display's
+        // the private notes (tree-attribution, json-dock.json): the display's
         // anonymous Intel tunnel hub is 0x03200000 (a forest root); the
         // dock's own anonymous Intel tunnel hub is 0x03210000, directly
         // under it. Independently confirmed by the route-string formula

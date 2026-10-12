@@ -915,7 +915,7 @@ extension DisplayDiagnostic {
     ///    max mode that IS a declared entry is labelled from that entry;
     ///    otherwise the candidate. A max mode may only raise the top, never
     ///    lower it: CoreGraphics builds its mode list from what the trained
-    ///    link can carry (`planning/display-current-mode-coregraphics.md`),
+    ///    link can carry (the private design note "display current mode (CoreGraphics)"),
     ///    so a lower max mode describes the link, not the panel.
     /// 4. No declared entry matches: when the max mode's active-pixel rate
     ///    sits above the candidate's by more than `tolerance`, macOS is

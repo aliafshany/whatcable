@@ -4,7 +4,7 @@ import Foundation
 /// registry snapshot (50) and the small probes (51 to 55).
 ///
 /// Runs live under `research-data/runs/<run_id>/` in the repo root, a link
-/// made by `scripts/link-research.sh` to the local data folder that ingest
+/// made by link-research.sh (private) to the local data folder that ingest
 /// fills from KV (never in git). Each run folder holds `<probe>.jsonl` per
 /// capture, `50_registry_snapshot_end.jsonl` for the end-of-run snapshot, and
 /// `run.json`. A fresh clone has no link, so `allRuns()` is empty: tests that

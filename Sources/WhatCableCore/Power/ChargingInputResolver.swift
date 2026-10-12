@@ -201,7 +201,7 @@ public enum ChargingInputResolver {
     /// STEADY setpoint behaves exactly as a fixed supply does, and the slope
     /// measured under it is the real path resistance, not an artefact. Phase 1
     /// already defines the measured path as including the charger's own output
-    /// impedance and load regulation (see `planning/cable-resistance-live-smc.md`
+    /// impedance and load regulation (see the private design note "cable resistance from live SMC"
     /// and `RegressionAccumulator`'s header: cable VBUS+GND loop + connectors +
     /// charger output impedance + Mac board path). A steady PPS source
     /// contributes to that path the same way a fixed one does. The case the

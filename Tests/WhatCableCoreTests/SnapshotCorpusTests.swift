@@ -116,7 +116,7 @@ struct SnapshotCorpusTests {
 
     @Test("Every linked run's snapshot loads complete")
     func linkedRunsLoad() throws {
-        // No research-data link (a fresh clone or CI) is a legitimate skip. A
+        // No research-data link (private; absent on a fresh clone or the public repo) is a legitimate skip. A
         // runs folder that exists but holds no runs is a broken link, and must
         // fail rather than pass on nothing.
         var isDir: ObjCBool = false

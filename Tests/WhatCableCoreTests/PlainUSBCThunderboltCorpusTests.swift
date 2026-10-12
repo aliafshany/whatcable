@@ -28,7 +28,7 @@ import Testing
 /// Thunderbolt, so it is absent on idle machines.
 ///
 /// Two passes: the old text-format folders in `research/customer-probes`, and
-/// the format 1 runs in `research-data/runs`, where new submissions land. Raw
+/// the format 1 runs in `research-data/runs` (private), where new submissions land. Raw
 /// probes are on-disk only, so each not-empty guard only arms when its corpus
 /// is present, same convention as the other corpus sweeps. A machine with a
 /// plain port but no built-in port list at all is an incomplete capture and is

@@ -4,7 +4,7 @@ import Testing
 
 /// Tests for Stage B v2 (PCI Path prefix join), the follow-up to the Stage A
 /// single-switch shortcut in `PCIeTunnelAttributionTests.swift`. Plan:
-/// `planning/pcie-tunnelled-usb-attribution.md`, "Stage B v2: PCI Path prefix
+/// the private design note "PCIe-tunnelled USB attribution", "Stage B v2: PCI Path prefix
 /// join" and "Stage B v2 tests" (items 1-17; corpus replay, item 15, lives in
 /// `ThunderboltProbeSweepTests.swift` alongside the rest of the probe-29
 /// sweep; mutation demos, item 17, are demonstrated live and logged in

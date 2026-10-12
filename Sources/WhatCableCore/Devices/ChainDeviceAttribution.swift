@@ -93,7 +93,7 @@ public struct ChainDeviceAttribution: Equatable {
 
     /// Per-device outcome of the PCI-Path-prefix join for one PCIe-carried
     /// (`carrier == .pcieTunnel`) device against one port's downstream chain.
-    /// Plan: `planning/pcie-tunnelled-usb-attribution.md`, "Stage B v2:
+    /// Plan: the private design note "PCIe-tunnelled USB attribution", "Stage B v2:
     /// PCI Path prefix join", resolution steps 1-7.
     enum PCIeStageBOutcome: Equatable {
         /// Some input needed for the join was missing or unusable (a
@@ -250,7 +250,7 @@ public struct ChainDeviceAttribution: Equatable {
     private static let tb5TunnelHubProductIDs: Set<UInt16> = [0x0B40, 0x0B41, 0x5787]
     private static let tb5TunnelHubVendorID: UInt16 = 0x8087
 
-    /// Per the TB5 tunnel-hub attribution spec (planning/dar-356-tb5-tunnel-hub-attribution.md, sections 3.1-3.4): on a TB5 chain where every box's USB3 tunnel
+    /// Per the TB5 tunnel-hub attribution spec (the private design note "TB5 tunnel-hub attribution", sections 3.1-3.4): on a TB5 chain where every box's USB3 tunnel
     /// shares ONE tunnelled controller (Gen T tunneling), each box
     /// contributes one anonymous Intel internal hub to that shared USB
     /// forest, with no name or vendor string tying it to its box (the

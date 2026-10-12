@@ -11,7 +11,7 @@ import Testing
 //
 // Importing normally means the test target sees the same API surface the
 // widget does, so `swift test` alone now fails if `public` is ever dropped.
-// The widget-build job in scripts/ci.sh is the belt; this is the braces, and
+// The widget-build job in the private CI is the belt; this is the braces, and
 // it costs nothing.
 import WhatCableCore
 

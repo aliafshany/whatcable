@@ -5,8 +5,8 @@ import Foundation
 ///
 /// The raw property is `Data`, read into triplets of three bytes each:
 /// `(USB4 port, unknown byte, 0x80 | USB3 adapter number)`. Reference capture
-/// (a UGreen TBT5 dock, JHL9580 silicon, `research`-adjacent
-/// `whatcable-app-notes/tree-attribution/dock-switch5-raw.txt`):
+/// (a UGreen TBT5 dock, JHL9580 silicon; the private notes, tree-attribution,
+/// dock-switch5-raw.txt):
 ///
 /// ```
 /// <018194028295038396048497050000>
@@ -24,7 +24,7 @@ import Foundation
 ///
 /// matching the switch's own `USB Adapter` port numbers 20-23 exactly
 /// (verified 160/160 switch instances corpus-wide, per
-/// `planning/dar-356-tb5-tunnel-hub-attribution.md` section 2 point 4). The
+/// the private design note "TB5 tunnel-hub attribution" section 2 point 4). The
 /// second byte of each triplet is not decoded by anything here: it is kept
 /// on `unknownByte` for forward visibility, never interpreted.
 public struct USBPortMapEntry: Equatable, Sendable {

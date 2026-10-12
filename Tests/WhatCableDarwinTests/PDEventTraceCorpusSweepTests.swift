@@ -27,7 +27,7 @@ import WhatCableCore
 // decode produced.
 //
 // House convention: the corpus lives behind the gitignored `research` symlink
-// (scripts/link-research.sh). A machine without it SKIPS with a message rather
+// (link-research.sh, private). A machine without it SKIPS with a message rather
 // than failing, and the count floors below only apply once enough of the
 // corpus is actually present, so a fresh clone with only the git-tracked
 // probe-32 files does not trip them.
@@ -145,7 +145,7 @@ struct PDEventTraceCorpusSweepTests {
         let folders = Self.allProbeFolders()
         guard !folders.isEmpty else {
             print("[PDEventTraceSweep] SKIP: no customer-probe corpus at \(Self.probeRoot.path). "
-                + "Run scripts/link-research.sh to link it, or this sweep tests nothing.")
+                + "Link the private research corpus (link-research.sh) to run it, or this sweep tests nothing.")
             return
         }
 

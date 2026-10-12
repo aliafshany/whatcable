@@ -48,7 +48,7 @@ struct TestKitExecutionPlanTests {
         // never exists on disk. TestKitRunner.run() would still "work": the
         // missing binary just gets logged as "not found" and lands in
         // noOutputProbes, with no build error and no obviously loud runtime
-        // signal. This test is the guard scripts/ci.sh's probe list parity
+        // signal. This test is the guard the private CI's probe list parity
         // job deliberately does not cover (it only checks probeNames against
         // probes/test-kit/*.c, not repeatProbes against probeNames).
         for repeatProbe in TestKitRunner.repeatProbes {

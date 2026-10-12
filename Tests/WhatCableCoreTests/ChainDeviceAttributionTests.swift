@@ -1475,7 +1475,7 @@ struct ChainDeviceAttributionTests {
     // Fixtures below reproduce the exact reported bug (owner's M5 MacBook,
     // Mac -> Studio Display -> Ugreen TBT5 dock, WD Game Drive rendered under
     // the display) from real capture data:
-    // `whatcable-app-notes/tree-attribution/json-dock.json` (USB tree,
+    // the private notes (tree-attribution, json-dock.json) (USB tree,
     // locationIDs) and `dock-switch5-raw.txt` / `display-raw-ioreg.txt`
     // (route strings, USB Port Map). See `USBDeviceTreeTests`'
     // `childHubPortRealCapture` for the same locationIDs checked directly.

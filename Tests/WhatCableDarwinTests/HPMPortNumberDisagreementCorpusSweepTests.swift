@@ -70,9 +70,9 @@ import Testing
 // The disagreement figures themselves are identical on every route.
 //
 // EMPTY-CORPUS BEHAVIOUR: if `research/customer-probes` is absent (a fresh
-// clone or a worktree where `scripts/link-research.sh` has not been run, and
+// clone, a worktree where the private research corpus is not linked, and
 // the public mirror, where the corpus never exists) the sweep prints one loud
-// line and returns without asserting. `scripts/ci.sh` carries the
+// line and returns without asserting. The private CI carries the
 // corpus-presence check that fails loudly for a local run in that state. In
 // EVERY other case the sweep fails rather than passing quietly: if the
 // directory is there but the record count is under the floor, that is a parser
@@ -221,7 +221,7 @@ struct HPMPortNumberDisagreementCorpusSweepTests {
     func portNumberDisagreementsAreTwoKnownShapes() {
         guard FileManager.default.fileExists(atPath: Self.probeRoot.path) else {
             print("[HPMPortNumberDisagreementSweep] SKIPPED: no corpus at \(Self.probeRoot.path). "
-                + "Run scripts/link-research.sh in this checkout to sweep for real.")
+                + "Link the private research corpus (link-research.sh) in this checkout to sweep for real.")
             return
         }
 

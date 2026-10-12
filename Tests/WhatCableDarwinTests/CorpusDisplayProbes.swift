@@ -463,7 +463,7 @@ enum CorpusDisplayProbes {
     }
 
     /// `account(folder:)` over the whole corpus. nil when the corpus is
-    /// absent (scripts/ci.sh's presence check owns that failure).
+    /// absent (the private CI's corpus-presence check owns that failure).
     /// Note on the folder figure this prints: `contentsOfDirectory` is not
     /// filtered to directories, so it counts the 7 rollup files beside the
     /// machine folders (`corpus.jsonl`, `index.md`, `assessment.md`,

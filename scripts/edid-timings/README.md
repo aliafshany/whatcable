@@ -66,7 +66,7 @@ that verification and is the only script that reads them.
    swift scripts/edid-timings/build-edid-timings.swift
    ```
 
-   `scripts/ci.sh` runs step 4 in `--check` mode (regenerate to a temp file,
+   The private CI runs step 4 in `--check` mode (regenerate to a temp file,
    diff against the committed one) so a CSV change without a regenerate, or
    a hand edit to the generated Swift, fails CI.
 
@@ -92,7 +92,7 @@ same two dictionaries this file's regenerate steps produce. An id missing
 from either table yields no mode, same as an unresolved HDMI VIC.
 
 `check-edid-timings.py`'s comparison above is against edid-decode's and the
-kernel's own tables, not real EDIDs. The parser was checked against edid-decode on all 602 corpus EDIDs on 2026-10-02 with 0 mismatches, and the whatcable-edid-oracle skill re-runs that check on demand.
+kernel's own tables, not real EDIDs. The parser was checked against edid-decode on all 602 corpus EDIDs on 2026-10-02 with 0 mismatches, and a private one-off check re-runs it on demand.
 
 ## Known convention difference: double-clocked SD formats
 

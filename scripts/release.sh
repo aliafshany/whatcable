@@ -145,7 +145,7 @@ fi
 # Anything still pending at release time blocks the release.
 #
 # This exists because "remember at release" items were living in PR bodies and
-# in Darryl's head, which is not a system. The gate fires at the moment it
+# in someone's head, which is not a system. The gate fires at the moment it
 # matters (running this script) rather than hoping somebody checks a board, and
 # it clears itself: folding the items into the notes file above is normally how
 # they get done.

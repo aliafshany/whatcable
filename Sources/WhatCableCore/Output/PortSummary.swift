@@ -141,7 +141,7 @@ extension PortSummary {
         // device or a TRM restriction on the selected transport (the same
         // predicate `.blockedBySecurity` keys on) before any USB3 speed
         // string is emitted. See USB3SpeedCorroboration and
-        // planning/dar-50-usb3-speed-corroboration.md.
+        // the private design note "USB3 speed corroboration".
         let selectedUSB3Transport = USB3SpeedCorroboration.selectedTransport(for: port, in: usb3Transports)
         let hasCorroboratedUSB3 = hasUSB3
             && USB3SpeedCorroboration.isCorroborated(selected: selectedUSB3Transport, devices: devices)
@@ -241,7 +241,7 @@ extension PortSummary {
         // Lines are attributed to the source they came from, because the four
         // sources have four different reliabilities and describe different
         // physical objects. A claim by the cable or the charger must never be
-        // rendered as a fact. See planning/port-card-source-attribution.md.
+        // rendered as a fact. See the private design note "port-card source attribution".
         //
         //   measured  - the Mac's own controllers: link state, negotiated
         //               contract, what's plugged in

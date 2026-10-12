@@ -1,6 +1,6 @@
 /*
  * Unit tests for probes/test-kit/probe_json.h. Run by scripts/probe-tests/run.sh,
- * which scripts/ci.sh calls. Plain C because nothing else in the repo compiles
+ * which the private CI calls. Plain C because nothing else in the repo compiles
  * the probes' code.
  */
 #include <stdio.h>

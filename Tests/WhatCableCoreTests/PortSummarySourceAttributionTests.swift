@@ -4,7 +4,7 @@ import Testing
 
 /// Pins the source-attribution rework: every line is attributed to where it
 /// came from, and the three bugs the flat list allowed can no longer be
-/// expressed. See planning/port-card-source-attribution.md.
+/// expressed. See the private design note "port-card source attribution".
 @Suite("Port card source attribution")
 struct PortSummarySourceAttributionTests {
 

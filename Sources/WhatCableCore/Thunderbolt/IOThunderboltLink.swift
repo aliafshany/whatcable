@@ -5,7 +5,7 @@ import Foundation
 // These decode the raw IOKit field values into Swift cases. Encoding is
 // anchored against Linux's `drivers/thunderbolt/tb_regs.h`, which describes
 // the same USB4 lane-adapter registers Apple's IOThunderbolt fields appear
-// to mirror. See planning/thunderbolt-fabric.md for the field-by-field
+// to mirror. See `research/thunderbolt-fabric.md` for the field-by-field
 // reasoning and the contributor samples that confirmed the mapping for
 // TB3, TB4 / USB4, and TB5. TB5 (raw speed code 0x2) was confirmed against
 // an M5 Pro + UGreen JHL9580 dock paste-back on issue #52.
@@ -638,7 +638,7 @@ public struct IOThunderboltPort: Hashable, Sendable {
     /// Registry path (IOService plane) of where this adapter's PCIe tunnel
     /// lands in the host tree, read from `PCI Path`. Present only on PCIe
     /// up/down adapters; nil elsewhere. Internal join key for Stage B's
-    /// PCI-Path-prefix attribution (see planning/pcie-tunnelled-usb-attribution.md).
+    /// PCI-Path-prefix attribution (see the private design note "PCIe-tunnelled USB attribution").
     /// Never user-facing: registry paths stay internal, like switch UIDs.
     public let pciPath: String?
     /// Registry entry ID of the `pciPath` landing node, read from

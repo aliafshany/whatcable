@@ -7,7 +7,7 @@ import Testing
 struct USBPortMapEntryTests {
 
     /// The reference JHL9580 capture:
-    /// `whatcable-app-notes/tree-attribution/dock-switch5-raw.txt`.
+    /// the private notes (tree-attribution, dock-switch5-raw.txt).
     private static let jhl9580Hex = "018194028295038396048497050000"
 
     private static func data(_ hex: String) -> Data {

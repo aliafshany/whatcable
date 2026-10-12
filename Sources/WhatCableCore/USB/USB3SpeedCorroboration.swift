@@ -14,7 +14,7 @@ private let _usb3CorroborationLog = Logger(subsystem: "uk.whatcable.whatcable", 
 /// there is no data peer and withdraws it. The settled state (no USB3 line)
 /// is correct; the flash is real system state but reads as the app losing
 /// information it briefly had. See
-/// `planning/dar-50-usb3-speed-corroboration.md` for the full design.
+/// the private design note "USB3 speed corroboration" for the full design.
 public enum USB3SpeedCorroboration {
 
     /// The ONE way every surface picks a port's direct (non-tunnelled) USB3

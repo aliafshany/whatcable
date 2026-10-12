@@ -83,7 +83,7 @@ IOREG_SYNTHETIC_KEYS = {
 VOLATILE_KEYS = {"IOKitDiagnostics", "AGCInfo", "SchedulerState"}
 
 # Identifiers that link information across the registry. None may be withheld
-# (whatcable-app CLAUDE.md:9-12, spec acceptance criteria).
+# (the project's hardware-identifier rule: identifiers are never removed or redacted; privacy is about people).
 JOIN_KEYS = {"UsbIOPort", "locationID", "ConnectionUUID", "USB Serial Number",
              "kUSBSerialNumberString", "INQUIRY Unit Serial Number", "Serial Number"}
 JOIN_KEY_CLASS_PREFIXES = {"UUID": ("AppleHPM", "AppleAPFS", "IOMedia", "IOGUIDPartitionScheme")}  # port and volume UUIDs
@@ -991,7 +991,7 @@ def paired_kept(records, paired):
 
 
 def kept_problems(records):
-    """Device serials stay unchanged (whatcable-app CLAUDE.md:9-12): every one the
+    """Device serials stay unchanged (the project's hardware-identifier rule): every one the
     live registry shows must be in the output unwithheld."""
     snap = sum(count_key(r["props"], "USB Serial Number", True) for r in records if r.get("record") == "entry")
     registry = subprocess.run(["ioreg", "-l", "-p", "IOService"], capture_output=True).stdout  # not always UTF-8

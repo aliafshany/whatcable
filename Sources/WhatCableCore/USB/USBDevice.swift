@@ -87,7 +87,7 @@ public struct USBDevice: Identifiable, Hashable {
     /// moment the ancestor walk hits the controller (before the continuation
     /// walk advances toward `apciecN`). `nil` unless `tunnelCarrier != nil`.
     /// Internal join key for Stage B's PCI-Path-prefix attribution
-    /// (`planning/pcie-tunnelled-usb-attribution.md`); never user-facing,
+    /// (the private design note "PCIe-tunnelled USB attribution"); never user-facing,
     /// like switch UIDs.
     public let tunnelControllerRegistryPath: String?
     /// Registry entry IDs of the controller and every ancestor between it and
@@ -376,12 +376,12 @@ public struct USBDevice: Identifiable, Hashable {
     /// actually lands on `parent`.
     ///
     /// Verified against a real capture
-    /// (`whatcable-app-notes/tree-attribution/json-dock.json`): a UGreen TBT5
+    /// (the private notes (tree-attribution, json-dock.json)): a UGreen TBT5
     /// dock's tunnel hub sits at locationID `0x03210000`, directly under a
     /// Studio Display's tunnel hub at `0x03200000`.
     /// `childHubPort(parent: 0x03200000, child: 0x03210000)` returns `1`,
     /// matching the route-string formula's independently-derived hub port
-    /// for that same dock (`planning/dar-356-tb5-tunnel-hub-attribution.md`
+    /// for that same dock (the private design note "TB5 tunnel-hub attribution"
     /// section 2 point 3).
     public static func childHubPort(parent: UInt32, child: UInt32) -> Int? {
         let hubPath = child & 0x00FF_FFFF

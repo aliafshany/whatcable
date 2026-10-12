@@ -164,7 +164,7 @@ struct USBPDSOPWatcherStateCCCorpusSweepTests {
         // Skip cleanly (not fail) when the corpus isn't checked out. This
         // is the documented convention for every sweep in this codebase
         // (an orchestrator ruling, design review round 5, against a Codex
-        // suggestion to change it): `scripts/ci.sh`'s separate
+        // suggestion to change it): the private CI's separate
         // corpus-presence check is the loud failure for a missing corpus,
         // not this test silently going red on a fresh clone/worktree with
         // no `research` symlink.

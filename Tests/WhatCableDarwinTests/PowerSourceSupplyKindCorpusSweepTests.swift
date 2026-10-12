@@ -32,7 +32,7 @@ struct PowerSourceSupplyKindCorpusSweepTests {
     @Test("Every winning option in the corpus carries a class string and parses as fixed")
     func everyWinningOptionParsesFixed() throws {
         let folders = CorpusPowerProbes.foldersWithProbe17()
-        try #require(!folders.isEmpty, "corpus missing: run scripts/link-research.sh")
+        try #require(!folders.isEmpty, "corpus missing: link the private research corpus (link-research.sh)")
 
         var blocks = 0
         var fixed = 0
