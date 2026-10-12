@@ -540,7 +540,12 @@ extension PortSummary {
             }
         } else if hasPayload && !isMagSafe {
             if !pdCapable {
-                emarkerSubtitle = String(localized: "This port can't read cable details: USB-only, no Power Delivery.", bundle: _coreLocalizedBundle)
+                // Second sentence is its own string so the first keeps its
+                // existing translations. A Thunderbolt port is the one place
+                // macOS reads the cable on a Mac whose USB-C ports lack PD.
+                let usbOnly = String(localized: "This port can't read cable details: USB-only, no Power Delivery.", bundle: _coreLocalizedBundle)
+                let tbHint = String(localized: "Plug the cable into a Thunderbolt port to see its details.", bundle: _coreLocalizedBundle)
+                emarkerSubtitle = usbOnly + " " + tbHint
             } else if let connectionAge, connectionAge < Self.emarkerReadWindow {
                 // Still inside the read window: macOS hasn't necessarily run
                 // Discover Identity yet, so "no e-marker" would be a claim we

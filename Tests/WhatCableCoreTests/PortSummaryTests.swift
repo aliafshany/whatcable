@@ -405,6 +405,28 @@ struct PortSummaryTests {
         )
     }
 
+    @Test("USB-only port points at a Thunderbolt port")
+    func usbOnlyPortPointsAtThunderboltPort() {
+        let port = makePort(active: ["USB3"], supported: ["USB2", "USB3"], superSpeed: true)
+        let subtitle = PortSummary(port: port).group(.emarker)?.subtitle
+        #expect(
+            subtitle == "This port can't read cable details: USB-only, no Power Delivery. Plug the cable into a Thunderbolt port to see its details.",
+            "expected the USB-only sentence, one space, then the Thunderbolt hint, got: \(String(describing: subtitle))"
+        )
+    }
+
+    @Test("PD-capable port never gets the Thunderbolt hint")
+    func pdCapablePortHasNoThunderboltHint() {
+        let port = makePort(active: ["CC", "USB2"], supported: ["CC", "USB2"], emarker: false)
+        let summary = PortSummary(port: port)
+        let subtitles = summary.groups.compactMap { $0.subtitle }
+        #expect(!subtitles.isEmpty, "expected at least one subtitle to check, got: \(summary.groups)")
+        #expect(
+            subtitles.contains(where: { $0.contains("Thunderbolt port to see its details") }) == false,
+            "CC port must not get the Thunderbolt hint, got: \(subtitles)"
+        )
+    }
+
     @Test("MagSafe port does not claim no power delivery")
     func magSafePortDoesNotClaimNoPowerDelivery() {
         // Regression: a charging MagSafe port reports an empty
@@ -445,6 +467,10 @@ struct PortSummaryTests {
         #expect(
             summary.bullets.contains(where: { $0.contains("No e-marker detected") }) == false,
             "MagSafe must not show the missing-e-marker bullet, got: \(summary.bullets)"
+        )
+        #expect(
+            summary.groups.compactMap { $0.subtitle }.contains(where: { $0.contains("Thunderbolt port to see its details") }) == false,
+            "MagSafe must not get the Thunderbolt hint, got: \(summary.groups)"
         )
     }
 
