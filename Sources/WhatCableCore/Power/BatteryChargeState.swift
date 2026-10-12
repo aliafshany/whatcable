@@ -88,7 +88,7 @@ extension BatteryChargeState {
         return chsc ? .charging : .onHold
     }
 
-    /// The charge-limit check. The key is chosen once: `CHWA`
+    /// The charge-limit check, per reading: `CHWA`
     /// when it reads (on: fixed 80 minus 5, off: no limit, `CHLS` never used),
     /// else `CHLS` (end threshold minus 5, only when the threshold is at least
     /// 10). Limited when `BUIC` is at or past the limit.

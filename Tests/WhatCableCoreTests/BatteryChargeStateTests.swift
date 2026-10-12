@@ -75,7 +75,7 @@ struct BatteryChargeStateTests {
         // No CHLS: CHWA on gives the fixed limit 75.
         #expect(decide { $0.chnc = 1 << 23; $0.chwa = true; $0.buic = 75 } == .onHold)
         #expect(decide { $0.chnc = 1 << 23; $0.chwa = false; $0.buic = 90 } == .charging)
-        // The key is chosen once: CHWA readable means CHWA is used and
+        // Per reading: CHWA present means CHWA is used and
         // CHLS never is. CHLS is consulted only when CHWA is absent.
         #expect(decide { $0.chnc = 1 << 23; $0.chls = 0; $0.chwa = true; $0.buic = 80 } == .onHold)
         #expect(decide { $0.chnc = 1 << 23; $0.chls = 80; $0.chwa = false; $0.buic = 90 } == .charging)

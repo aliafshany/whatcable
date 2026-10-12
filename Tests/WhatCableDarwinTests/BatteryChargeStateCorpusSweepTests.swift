@@ -57,13 +57,13 @@ struct BatteryChargeStateCorpusSweepTests {
         guard let bsfc = v("BSFC") else { return nil }
         if bsfc != 0 { return .full }
         var limit: UInt64 = 0
-        if let chwa = v("CHWA") {                       // has_chwa wins; CHLS never read
+        if let chwa = v("CHWA") {                       // CHWA wins; CHLS not read
             if chwa != 0 { limit = 80 - 5 }
-        } else if let chls = v("CHLS") {                // has_chls only without CHWA
+        } else if let chls = v("CHLS") {                // CHLS only without CHWA
             if chls & 0xFF >= 10 { limit = (chls & 0xFF) - 5 }
         }
         let limited = limit > 0 && (v("BUIC").map { $0 >= limit } ?? false)
-        // apple_smc_read_u64: CHNC counts only at 8 bytes (16 hex digits).
+        // CHNC counts only at 8 bytes (16 hex digits).
         if hex["CHNC"]?.count == 16, let chnc = v("CHNC") {
             if chnc & 1 != 0 { return .full }
             if chnc == 1 << 23 && !limited { return .charging }
