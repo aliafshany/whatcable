@@ -125,7 +125,7 @@
 "20 Gbps capable" = "با قابلیت 20 Gbps";
 "40 Gbps capable" = "با قابلیت 40 Gbps";
 "80 Gbps capable" = "با قابلیت 80 Gbps";
-"Charger connected. Battery is full, so the Mac isn't drawing power." = "شارژر متصل است. باتری پر است، بنابراین Mac توانی مصرف نمی‌کند.";
+"Charger connected. Battery is full, so the Mac isn't drawing power." = "شارژر متصل است. باتری پر است، بنابراین Mac از شارژر توانی دریافت نمی‌کند.";
 "Per-port negotiation data is not available. Wattage is from the system-wide adapter reading." = "داده‌های مذاکره به تفکیک درگاه در دسترس نیست. توان بر اساس خوانش آداپتور در کل سیستم است.";
 "Plugged in · battery full" = "متصل به برق · باتری پر است";
 "Try a higher-wattage charger to identify the cable." = "برای شناسایی کابل، از یک شارژر با توان بالاتر استفاده کنید.";
@@ -404,7 +404,7 @@
 "Link carries" = "اتصال انتقال می‌دهد";
 "Rate" = "نرخ";
 "See whether the link is carrying your monitor's full resolution and refresh." = "ببینید آیا اتصال وضوح و نرخ نوسازی کامل مانیتور شما را منتقل می‌کند یا خیر.";
-"Display links have their own screen: Display Diagnostics." = "اتصالات نمایشگر صفحه اختصاصی خود را دارند: Display Diagnostics.";
+"Display links have their own screen: Display Diagnostics." = "اتصالات نمایشگر صفحه اختصاصی خود را دارند: «عیب‌یابی نمایشگر».";
 
 /* Billboard device (display dimension). English; community-refined. */
 "Billboard device present" = "دستگاه Billboard موجود است";
@@ -451,8 +451,8 @@
 "This Mac reports overall power below, but not per-port readings." = "این Mac توان کلی را در زیر گزارش می‌کند، اما مقادیر مجزای هر درگاه را نشان نمی‌دهد.";
 "Per-port metering isn't available on this Mac." = "سنجش مجزای هر درگاه در این Mac در دسترس نیست.";
 "macOS can be slow to report per-port power, sometimes up to a minute." = "گزارش توان هر درگاه توسط macOS ممکن است زمان‌بر باشد، گاهی تا یک دقیقه.";
-"Display connected. No power is being sent out of this port. Incoming power shows in System Power Input below." = "نمایشگر متصل است. هیچ توانی از این درگاه ارسال نمی‌شود. توان ورودی در System Power Input در پایین نمایش داده می‌شود.";
-"A charger is connected here, but your Mac is drawing power through %@. Incoming power shows in System Power Input below." = "یک شارژر به اینجا متصل است، اما Mac شما توان را از طریق %@ دریافت می‌کند. توان ورودی در System Power Input در پایین نمایش داده می‌شود.";
+"Display connected. No power is being sent out of this port. Incoming power shows in System Power Input below." = "نمایشگر متصل است. هیچ توانی از این درگاه ارسال نمی‌شود. توان ورودی در «ورودی توان سیستم» در پایین نمایش داده می‌شود.";
+"A charger is connected here, but your Mac is drawing power through %@. Incoming power shows in System Power Input below." = "یک شارژر به اینجا متصل است، اما Mac شما توان را از طریق %@ دریافت می‌کند. توان ورودی در «ورودی توان سیستم» در پایین نمایش داده می‌شود.";
 "Connected to %lld Thunderbolt devices: %@" = "متصل به %1$lld دستگاه Thunderbolt: %2$@";
 "Thunderbolt fabric:" = "Thunderbolt fabric:";
 
@@ -490,7 +490,7 @@
 "e.g. left drawer" = "مثلاً کشوی چپ";
 "Tracking: %@" = "در حال ردیابی: %@";
 "%@: underperformed before" = "%@: سابقهٔ افت عملکرد دارد";
-"This cable has dropped below its rating before. Open Saved Cables for the history." = "این کابل قبلاً به زیر مشخصات نامی خود افت کرده است. برای مشاهدهٔ تاریخچه، Saved Cables را باز کنید.";
+"This cable has dropped below its rating before. Open Saved Cables for the history." = "این کابل قبلاً به زیر مشخصات نامی خود افت کرده است. برای مشاهدهٔ تاریخچه، «کابل‌های ذخیره‌شده» را باز کنید.";
 "Tracking this as %@?" = "این کابل به‌عنوان %@ ردیابی شود؟";
 "Is this one of your cables?" = "آیا این یکی از کابل‌های شماست؟";
 "Pick…" = "انتخاب…";
@@ -630,7 +630,7 @@
 "Connect a charger to identify the cable." = "برای شناسایی کابل، یک شارژر را متصل کنید.";
 
 /* Power Monitor: a charge path that never negotiates a contract (issue #592) */
-"No PD contract on this port. Incoming power shows in System Power Input below." = "هیچ توافق PD در این درگاه وجود ندارد. توان ورودی در System Power Input در پایین نمایش داده می‌شود.";
+"No PD contract on this port. Incoming power shows in System Power Input below." = "هیچ توافق PD در این درگاه وجود ندارد. توان ورودی در «ورودی توان سیستم» در پایین نمایش داده می‌شود.";
 
 /* PD event log: opcode-plus-argument decode of PortControllerEvtBuffer */
 "Plug attached" = "کانکتور متصل شد";
@@ -646,7 +646,7 @@
 "The source reported whether the requested power level is now in place." = "منبع گزارش داد که آیا سطح توان درخواست‌شده اعمال شده است یا خیر.";
 "The Mac started supplying power to the device on this port." = "Mac شروع به تأمین توان برای دستگاه متصل به این درگاه کرد.";
 "This event code has not been decoded yet." = "این کد رویداد هنوز رمزگشایی نشده است.";
-"The port's attach and detach counters move with this event, so it lines up with what Port Health shows." = "شمارنده‌های اتصال و قطع اتصال درگاه با این رویداد تغییر می‌کنند، بنابراین با آنچه Port Health نشان می‌دهد هماهنگ است.";
+"The port's attach and detach counters move with this event, so it lines up with what Port Health shows." = "شمارنده‌های اتصال و قطع اتصال درگاه با این رویداد تغییر می‌کنند، بنابراین با آنچه «سلامت درگاه» نشان می‌دهد هماهنگ است.";
 "The source sent its list of power data objects. The argument byte is how many it offered." = "منبع فهرست اشیاء دادهٔ توان (PDO) خود را ارسال کرد. بایت آرگومان نشان‌دهندهٔ تعداد موارد ارائه‌شده است.";
 "The Mac sent a request picking one of the advertised power levels. It always follows a source capabilities event." = "Mac درخواستی برای انتخاب یکی از سطوح توان اعلام‌شده ارسال کرد. این رویداد همیشه پس از رویداد قابلیت‌های منبع رخ می‌دهد.";
 "The outcome of the request. An argument of 0x81 means the source turned it down and the old power level stayed." = "نتیجهٔ درخواست. آرگومان 0x81 به این معنی است که منبع آن را رد کرده و سطح توان قبلی حفظ شده است.";
