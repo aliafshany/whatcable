@@ -13,7 +13,7 @@
 "Connected devices" = "دستگاه‌های متصل";
 "Connection" = "اتصال";
 "Display" = "نمایشگر";
-"Desktop Mac: charger identity (FedDetails) is not available." = "Mac رومیزی: هویت شارژر (FedDetails) در دسترس نیست.";
+"Desktop Mac: charger identity (FedDetails) is not available." = "در Mac رومیزی: هویت شارژر (FedDetails) در دسترس نیست.";
 "Done" = "انجام شد";
 "Downloading…" = "در حال دانلود…";
 "Newer version found, installing it…" = "نسخهٔ جدیدتر پیدا شد، در حال نصب…";
@@ -27,7 +27,7 @@
 "Include Mac model and macOS version" = "شامل مدل Mac و نسخهٔ macOS";
 "Install failed: %@" = "نصب ناموفق بود: %@";
 "This account can't update apps in this location. Download the new version from whatcable.uk, or update with Homebrew." = "این حساب کاربری نمی‌تواند برنامه‌ها را در این مکان به‌روزرسانی کند. نسخهٔ جدید را از whatcable.uk دانلود کنید یا با Homebrew به‌روزرسانی نمایید.";
-"WhatCable can't update itself from its current folder. Move WhatCable into your Applications folder, relaunch it, and try again, or download the latest version from whatcable.uk." = "WhatCable نمی‌تواند خود را از پوشهٔ فعلی‌اش به‌روزرسانی کند. WhatCable را به پوشهٔ Applications منتقل کنید، آن را دوباره باز کنید و مجدداً تلاش کنید، یا آخرین نسخه را از whatcable.uk دانلود نمایید.";
+"WhatCable can't update itself from its current folder. Move WhatCable into your Applications folder, relaunch it, and try again, or download the latest version from whatcable.uk." = "برنامهٔ WhatCable نمی‌تواند خود را از پوشهٔ فعلی‌اش به‌روزرسانی کند. WhatCable را به پوشهٔ Applications منتقل کنید، آن را دوباره باز کنید و مجدداً تلاش کنید، یا آخرین نسخه را از whatcable.uk دانلود نمایید.";
 "Install update" = "نصب به‌روزرسانی";
 "Installing, WhatCable will relaunch" = "در حال نصب، WhatCable دوباره راه‌اندازی خواهد شد";
 "Keep window open" = "باز نگه داشتن پنجره";
@@ -76,8 +76,8 @@
 "Verifying signature…" = "در حال تأیید امضا…";
 "View release" = "مشاهدهٔ نسخه";
 "What gets shared?" = "چه مواردی به اشتراک گذاشته می‌شود؟";
-"WhatCable %@ is available" = "WhatCable %@ در دسترس است";
-"WhatCable on GitHub" = "WhatCable در GitHub";
+"WhatCable %@ is available" = "نسخهٔ %@ از WhatCable در دسترس است";
+"WhatCable on GitHub" = "\U200FWhatCable در GitHub";
 "Yes" = "بله";
 "You're on %@" = "شما در %@ هستید";
 "%lld USB devices" = "%lld دستگاه USB";
@@ -94,7 +94,7 @@
 "Raw IOKit registry properties, a list of the driver classes present on your Mac, plus your macOS version, chip type and Mac model identifier (for example, Mac14,3). This is data macOS already exposes on your Mac." = "ویژگی‌های خام رجیستری IOKit، فهرستی از کلاس‌های درایور موجود در Mac شما، به‌علاوهٔ نسخهٔ macOS، نوع تراشه و شناسهٔ مدل Mac (برای مثال، Mac14,3). این‌ها داده‌هایی هستند که macOS از قبل در Mac شما ارائه می‌دهد.";
 "What happens" = "چه اتفاقی می‌افتد";
 "What is collected" = "چه اطلاعاتی جمع‌آوری می‌شود";
-"WhatCable runs %lld IOKit probes that read hardware data your Mac already publishes. The results are sent to a secure server to help improve cable and port detection." = "WhatCable تعداد %lld بررسی IOKit را اجرا می‌کند که داده‌های سخت‌افزاری منتشرشده توسط Mac شما را می‌خوانند. نتایج به یک سرور امن ارسال می‌شوند تا به بهبود شناسایی کابل و درگاه کمک کنند.";
+"WhatCable runs %lld IOKit probes that read hardware data your Mac already publishes. The results are sent to a secure server to help improve cable and port detection." = "تعداد %lld بررسی IOKit توسط WhatCable اجرا می‌شود که داده‌های سخت‌افزاری منتشرشده توسط Mac شما را می‌خوانند. نتایج به یک سرور امن ارسال می‌شوند تا به بهبود شناسایی کابل و درگاه کمک کنند.";
 "Your machine's hardware UUID is hashed with SHA-256 before sending. No names, accounts, your Mac's serial number, or personal data are collected or stored." = "شناسهٔ سخت‌افزاری (UUID) دستگاه شما قبل از ارسال با SHA-256 هش می‌شود. هیچ نام، حساب، شماره سریال Mac یا داده‌های شخصی جمع‌آوری یا ذخیره نمی‌شوند.";
 
 /* Negotiation diagnostics + Pro UX (PR #55). English; non-English to be refined by the community translation flow. */
@@ -134,13 +134,13 @@
 "Two" = "دو";
 "One" = "یک";
 "USB Gen" = "نسل USB";
-"Gen 2 or higher" = "Gen 2 یا بالاتر";
+"Gen 2 or higher" = "\U200FGen 2 یا بالاتر";
 "Gen 1" = "Gen 1";
 "USB4 supported" = "از USB4 پشتیبانی می‌شود";
 "USB 3.2 supported" = "از USB 3.2 پشتیبانی می‌شود";
 "USB 2.0 supported" = "از USB 2.0 پشتیبانی می‌شود";
 "USB 2.0 hub hops" = "گام‌های هاب USB 2.0";
-"USB4 asymmetric" = "USB4 نامتقارن";
+"USB4 asymmetric" = "\U200FUSB4 نامتقارن";
 "U3 to U0 transition" = "گذار از U3 به U0";
 "Through U3S" = "از طریق U3S";
 "Direct" = "مستقیم";
@@ -166,7 +166,7 @@
 "Stops WhatCable reading capability info from USB devices. Turn on if a KVM switch or hub misbehaves (relay clicking, or keyboard and mouse dropping) when WhatCable runs." = "از خواندن اطلاعات قابلیت‌ها از دستگاه‌های USB توسط WhatCable جلوگیری می‌کند. اگر هنگام اجرای WhatCable، یک هاب یا سوئیچ KVM دچار اختلال می‌شود (صدای کلیک رله، یا قطع شدن صفحه‌کلید و ماوس)، این گزینه را روشن کنید.";
 
 /* Intel Macs are unsupported; notice shown on every launch. */
-"WhatCable can't read cables on this Mac" = "WhatCable نمی‌تواند کابل‌ها را در این Mac بخواند";
+"WhatCable can't read cables on this Mac" = "در این Mac، WhatCable نمی‌تواند کابل‌ها را بخواند";
 "This Mac has an Intel processor. WhatCable gets its cable and port data from Apple Silicon's port controller, and Intel Macs don't expose it, so the app will show nothing useful.\n\nIt'll stay open if you want to look around, but there's nothing behind it." = "این Mac پردازندهٔ Intel دارد. WhatCable داده‌های کابل و درگاه خود را از کنترل‌کنندهٔ درگاه Apple Silicon دریافت می‌کند و Macهای Intel آن را ارائه نمی‌دهند، بنابراین برنامه هیچ اطلاعات مفیدی نشان نخواهد داد.\n\nاگر بخواهید بررسی کنید برنامه باز می‌ماند، اما داده‌ای برای نمایش وجود ندارد.";
 "OK" = "تأیید";
 "Learn more" = "بیشتر بدانید";
